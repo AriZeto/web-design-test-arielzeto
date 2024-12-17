@@ -1,0 +1,415 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fdf7f4;
+}
+
+/* Was necessary to to ensure no overflow... */
+* {
+  box-sizing: border-box;
+}
+
+/* Navbar */
+.navbarContainer {
+  display: flex;
+  background-color: #333;
+  padding: 10px;
+  width: 100%;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  justify-content: space-evenly;
+}
+
+.navbar ul li {
+  position: relative;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: transparent;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar ul li:hover::after {
+  transform: scaleX(1);
+  background-color: #8eb484;
+}
+
+.navbar-logo {
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+
+/* About Section */
+#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background-color: #fdf7f4;
+  border-radius: 10px;
+}
+
+.about-left {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 50%;
+}
+
+.about-left h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.about-left p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.about-right {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-right img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section (The featured image and text) */
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fdf7f4;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.hero-img-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 2rem 1rem 0 1rem;
+}
+
+.hero-img-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+/* Call to Action Section (Card where you click to see a modal) */
+#call-to-action {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background-color: #fdf7f4;
+}
+
+/* Additional styling for the Call to Action Card */
+.cta-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  max-width: 900px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.cta-card:hover {
+  transform: scale(1.02);
+}
+
+.cta-card-text {
+  flex: 1;
+}
+
+.cta-card-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.cta-card-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.cta-card-img {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-card-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Styles for Modal pop out when clicking the Call to Action */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #333;
+}
+
+/* Show Modal when targeted (Done this way as test does not mention I can use TypeScript) */
+:target.modal {
+  display: block;
+}
+
+/* Cards for testimoanls, how it works, and features */
+.testimonial-card,
+.how-it-works-card,
+.feature-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover,
+.how-it-works-card:hover,
+.feature-card:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+#testimonials {
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+/* How It Works Section */
+#how-it-works {
+  padding: 2rem;
+  text-align: center;
+}
+
+.how-it-works-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Features Section */
+#features {
+  text-align: center;
+  padding: 2rem;
+}
+
+.features-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-title {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact Section (Note, button for Form is not interactable, as this is a Demo) */
+#contact {
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.contact button {
+  padding: 12px 25px;
+  background-color: #8eb484;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: #6c8e6b;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 2rem 0;
+  text-align: center;
+  color: white;
+}
+
+.footer-text {
+  font-size: 1rem;
+}
+
+#click-now {
+  text-decoration: none;
+  background: linear-gradient(to right, #8eb486, #997c70);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+  }
+  #about {
+    flex-direction: column;
+  }
+  .about-left,
+  .about-right {
+    max-width: 100%;
+  }
+
+  .cta-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cta-card-img {
+    margin-top: 1rem;
+  }
+}
