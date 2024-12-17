@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyBrew</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbarContainer">
+      <div class="navbar">
+        <div class="svg-icon">
+          <img
+            src="assets/coffee-cup.svg"
+            alt="Coffee Cup"
+            class="navbar-logo"
+          />
+        </div>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <!-- The hero section, essentially the featured image with text overlay.-->
+      <section id="hero" class="hero">
+        <div class="hero-img-container">
+          <img
+            src="Assets/coffee-featured.jpg"
+            alt="Featured Image"
+            class="hero-img"
+          />
+          <div class="hero-img-text">
+            <h2>Welcome to EasyBrew</h2>
+            <p>Learn to love making coffee, the right way</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section (includes call to action modal!) -->
+      <section id="call-to-action">
+        <a href="#modal" class="cta-card">
+          <div class="cta-card-text">
+            <h2>Make Coffee, the right way</h2>
+            <p>
+              EasyBrew is engineered to be simple to use, all while keeping that
+              fresh coffee taste. Experience the espresso aroma you love, with
+              the care and quality of a pro product. Make a perfect cup of
+              coffee every morning (or whenever you want it). 
+              <p id="click-now">Click to find out
+                more.</p>
+            </p>
+          </div>
+          <div class="cta-card-img">
+            <img src="Assets/coffee-small-web.jpg" alt="Coffee Image" />
+          </div>
+        </a>
+      </section>
+
+      <!-- Modal, utilized when clicking on the 'Call to Action'-->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <a href="#" class="modal-close">&times;</a>
+          <h2>What's so special about EasyBrew?</h2>
+          <p>
+            EasyBrew, the next revolutuion in coffee brewing. This product is designed for everyone who enjoys a good cup of coffee, wherever and whenver.
+            Precicely engineered to be compact, easy to use, and with pro-grade materials - EasyBrew is the perfect gift for yourself or a loved one.
+          </p>
+          <p>
+            The EasyBrew, with its shine and luster, will make any kitchen look more elegant - or wherever you wish to use it (or take it!).
+            While the EasyBrew is simple to use, its appearance was designed with professional care and premium materials.
+          </p>
+          <p>
+            The EasyBrew is also energy efficient, given the design-decision to be green and use recycled materials.
+          </p>
+        </div>
+      </div>
+
+      <!-- About EasyBrew Section -->
+      <section id="about" class="about">
+        <div class="about-left">
+          <h2>About Our Product</h2>
+          <p>
+            The EasyBrew is a professional grade, low-cost, and eco-friendly coffee maker, all while bolstering a design so sleek that your entire family will be jealous!
+            Made out of recycled materials, the EasyBrew is a product that when using, you can feel good about using it.
+          </p>
+          <p>
+            Whether you prefer dark-roast coffee, blonde espressos, or whatever it is you desire - this product can do it for you, and with efficiency too.
+            Why fork over the big bucks for an overpriced coffee maker with too many complex functions, when you can have the EasyBrew, a product that is just as good, if not better, for a fraction of the price? </p>
+            <p>
+            Spoiler alert: the Coffee will taste just as good, if not better (or your money back guaranteed)!
+          </p>
+        </div>
+        <div class="about-right">
+          <img src="Assets/coffee-brew.jpg" alt="About Product Image" />
+        </div>
+      </section>
+
+      <!-- Customer Testimonials Section -->
+      <section id="testimonials">
+        <h2>Testimonials</h2>
+        <div class="testimonial-container">
+          <div class="testimonial-card">
+            <p class="testimonial-description">
+              "I have never had such a wonderful cup of coffee. EasyBrew has
+              really changed how I start my day."
+            </p>
+            <div class="testimonial-info">
+              <h3 class="testimonial-name">Doug Johnson</h3>
+              <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+              <p class="testimonial-role">Coffee Enthusiast</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-description">
+              "A product I could never go without. The quality of the coffee is
+              great. I love it!"
+            </p>
+            <div class="testimonial-info">
+              <h3 class="testimonial-name">Ariel Zeto</h3>
+              <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+              <p class="testimonial-role">Home Brewer</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-description">
+              "Sometimes I look up at my human, and I notice that he really
+              looks forward to EasyBrew."
+            </p>
+            <div class="testimonial-info">
+              <h3 class="testimonial-name">Jingo Grant</h3>
+              <p class="testimonial-rating">⭐⭐⭐⭐⭐</p>
+              <p class="testimonial-role">Stay at home Cat</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How EasyBrew works Section -->
+      <section id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="how-it-works-container">
+          <div class="how-it-works-card">
+            <h3>Step 1</h3>
+            <p>Select your favorite coffee beans (already ground), whatever it is your heart desires.</p>
+          </div>
+          <div class="how-it-works-card">
+            <h3>Step 2</h3>
+            <p>Place the EasyBrew over your mug, and select the accessory you wish to you (this is modular and not necessary).</p>
+          </div>
+          <div class="how-it-works-card">
+            <h3>Step 3</h3>
+            <p>Wait as your kitchen fills with a nice aroma from the drip coffee, and enjoy your freshly brewed coffee.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- EasyBrew Features Section -->
+      <section id="features">
+        <h2>Features</h2>
+        <div class="features-container">
+          <div class="feature-card">
+            <h3 class="feature-title">Simple to Use</h3>
+            <p class="feature-description">
+              EasyBrew is simple to use. No complex functions or buttons to use!
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3 class="feature-title">Customizable</h3>
+            <p class="feature-description">
+              Tailor your coffee experience based on how much water, coffee, and strength the coffee drinker wants.
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3 class="feature-title">Quick and efficient</h3>
+            <p class="feature-description">
+              Your coffee will be waiting for you, eager to be sipped!
+            </p>
+          </div>
+          <div class="feature-card">
+            <h3 class="feature-title">Eco-friendly</h3>
+            <p class="feature-description">
+              EasyBrew is engineered with green materials, and is energy efficient.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact EasyBrew Section -->
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>
+          Have a question? Reach out to us!
+        </p>
+        <form action="/submit-form" method="POST" class="contact-form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="4"
+            required
+          ></textarea>
+          <button type="submit" class="cta-button" disabled>
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 - Designed for ChowaCo by Ariel Zeto.</p>
+    </footer>
+  </body>
+</html>
